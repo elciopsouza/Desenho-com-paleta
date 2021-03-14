@@ -1,0 +1,20 @@
+const val tipoOper:Int = 4
+fun main() {
+	var a:Float? = 2.85f
+    var b:Float? = 6.84f
+    var y:Float = 0f
+    if(a == null || b == null) {
+        println("Variáveis não podem ser null !!!")
+    } else if(tipoOper == 4 && b == 0f) {
+            println("ERRO !!! Não pode dividir por 0(zero) !!!")
+           } else {
+                when(tipoOper) {
+                    1 -> {y = a + b}
+                    2 -> {y = a - b}
+                    3 -> {y = a * b}
+                    4 -> {y = a / b}
+                    else -> println("Operação inválida, escolha entre 1 e 4 !!!")
+                }
+                if(tipoOper <= 4) println("a = $a, b = $b, y = $y")
+              }
+}
